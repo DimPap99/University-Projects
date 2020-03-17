@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Path.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Path.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,22 +201,46 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="746" y="439" width="494" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/67.27.1853.1053@67.27.1853.1053" timestamp="1584447094471" />
-    <state width="1807" height="333" key="GridCell.Tab.0.bottom" timestamp="1584454732222">
+    <state x="849" y="257" width="279" height="590" key="#xdebugger.XInspectDialog" timestamp="1584472192515">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="333" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1584454732222" />
-    <state width="1807" height="333" key="GridCell.Tab.0.center" timestamp="1584454732221">
+    <state x="849" y="257" width="279" height="590" key="#xdebugger.XInspectDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1584472192515" />
+    <state x="776" y="296" width="424" height="513" key="FileChooserDialogImpl" timestamp="1584460416180">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="333" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1584454732221" />
-    <state width="1807" height="333" key="GridCell.Tab.0.left" timestamp="1584454732220">
+    <state x="776" y="296" width="424" height="513" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1584460416180" />
+    <state width="1807" height="333" key="GridCell.Tab.0.bottom" timestamp="1584474097905">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="333" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1584454732220" />
-    <state width="1807" height="333" key="GridCell.Tab.0.right" timestamp="1584454732222">
+    <state width="1807" height="333" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1584474097905" />
+    <state width="1807" height="333" key="GridCell.Tab.0.center" timestamp="1584474097905">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="333" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1584454732222" />
+    <state width="1807" height="333" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1584474097905" />
+    <state width="1807" height="333" key="GridCell.Tab.0.left" timestamp="1584474097904">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="333" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1584474097904" />
+    <state width="1807" height="333" key="GridCell.Tab.0.right" timestamp="1584474097905">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="333" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1584474097905" />
+    <state width="1807" height="299" key="GridCell.Tab.1.bottom" timestamp="1584473770002">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="299" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1584473770002" />
+    <state width="1807" height="299" key="GridCell.Tab.1.center" timestamp="1584473770002">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="299" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1584473770002" />
+    <state width="1807" height="299" key="GridCell.Tab.1.left" timestamp="1584473770001">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="299" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1584473770001" />
+    <state width="1807" height="299" key="GridCell.Tab.1.right" timestamp="1584473770002">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="299" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1584473770002" />
     <state x="482" y="187" key="SettingsEditor" timestamp="1584346786053">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -228,5 +253,16 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1584346990899" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="childrenStates" />
+        <watch expression="microscope" />
+        <watch expression="MetwpoAnazhthshs" />
+        <watch expression="childrenStates" />
+        <watch expression="currentNeighbour" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

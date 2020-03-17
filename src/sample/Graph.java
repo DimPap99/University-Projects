@@ -41,7 +41,7 @@ public class Graph {
 
                 String[] possible_neighbors =
                         new String[]{(row - 1) + "," + col, row + "," + (col - 1),
-                                row + "," + (col + 1), (row + 1) + "," + col};
+                                (row + 1) + "," + col,row + "," + (col + 1)};
                 for (String possNeighbor:possible_neighbors) {
 
                     if(this.nodes.containsKey(possNeighbor)){
