@@ -28,7 +28,7 @@ public class Graph {
                 }
                 Node node = new Node(col,row,wall);
                 if(col == 1 && row == 0) node.is_start = true;
-                if(col == 1 && row == 5) node.is_start = false;
+                if(col == 1 && row == 5) node.is_end = true;
                 this.nodes.put(node.getNodeId(),node);
             }
         }

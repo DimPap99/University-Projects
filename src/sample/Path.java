@@ -25,8 +25,8 @@ public class Path implements Cloneable {
 
     public void addNode(Node n){
         this.nodesInPath.add(n);
-        this.cost = this.nodesInPath.size();
-        this.pathStr = this.pathStr + " " + n.getNodeId();
+
+        this.pathStr = this.pathStr + n.getNodeId() + " ";
     }
 
     @Override

@@ -8,6 +8,7 @@ import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
@@ -24,6 +25,13 @@ public class Main extends Application {
 
     }
 
+    public static String[] getTheStrPaths(List<Path> paths){
+        String[] arr = new String[paths.size()];
+        for(int i = 0; i < paths.size();i++){
+            arr[i] = paths.get(i).getPathStr();
+        }
+        return arr;
+    }
 
     public static void main(String[] args) throws CloneNotSupportedException {
 
@@ -40,23 +48,33 @@ public class Main extends Application {
         I.addNode(graph.nodes.get("0,1"));
         MetwpoAnazhthshs.push(I);
         int bound = Integer.MAX_VALUE;
-
+        boolean registeredBound = false;
         int counter = 1;
         while(MetwpoAnazhthshs.size() != 0){
             // if its not the first time that we get in the loop, add to the closedSet our the path that
             // we previously checked at the microscope, and add at the front of the MetwpoAnazitisis the previous
             // ChildrenStates
-            System.out.println(microscope.getPathStr());
+
             if(counter != 1){
                 closedSet.add(visitedPaths.get(visitedPaths.size() - 1));
 
             }
             //First we get the currentPath and add it to the microscope. If the counter is ven
             microscope = MetwpoAnazhthshs.pop();
+            MetwpoAnazhthshs.push(microscope);
+            System.out.println(MetwpoAnazhthshs.toString()+microscope.getPathStr() + Arrays.toString(getTheStrPaths(closedSet)) + bound);
+            MetwpoAnazhthshs.pop();
             visitedPaths.add(microscope);
+
+
             if(graph.nodes.get(microscope.getLastNode()).is_end){
-                bound = microscope.getCost();
+                //subtract 1 because the final element of the string array after .split is a blank string " "
+                bound = microscope.getCost()  ;
+
+                registeredBound = true;
+                continue;
             }
+            if(microscope.getCost()  > bound) continue;
             //For each last node in our path check its neighbours
             for (String neighbour :graph.nodes.get(microscope.getLastNode()).neighbours) {
                 Node currentNeighbour = graph.nodes.get(neighbour);
@@ -77,6 +95,7 @@ public class Main extends Application {
                     childrenStates.push(childPath);
                 }
             }
+            System.out.println(Arrays.toString(getTheStrPaths(childrenStates)));
             //After we get all the children we pop the stack until its empty and we assign its values in the MetwpoAnazitisis
             while (childrenStates.size()!=0){
 
