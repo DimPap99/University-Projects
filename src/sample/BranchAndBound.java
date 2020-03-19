@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Stack;
 
 public class BranchAndBound {
-
+    static int bound = Integer.MAX_VALUE;
     public static String getLatestClosedSet(List<Path> closedSet){
         //System.out.println(closedSet.size());
         String latestSet = "";
@@ -54,7 +54,7 @@ public class BranchAndBound {
         List<Path> closedSet = new ArrayList<Path>();
         Path microscope = new Path("0,1 ");
         searchFront.push(microscope);
-        int bound = Integer.MAX_VALUE;
+
         Stack<Path> childrenStates = new Stack<Path>();
         List<Path> visitedPaths = new ArrayList<Path>();
 
@@ -66,11 +66,11 @@ public class BranchAndBound {
             if(counter != 1){
                 closedSet.add(visitedPaths.get(visitedPaths.size() - 1));
             }
-            Records r = new Records(Arrays.toString(getReversedArray(getTheStrPaths(searchFront))).replace("[","").replace("]",""),"",
+            Records r = new Records(Arrays.toString(getReversedArray(getTheStrPaths(searchFront))).replace("[","").replace("]",""),"KENO",
                     "", bound,"[]");
             microscope = searchFront.pop();
-            r.setClosedSet(getLatestClosedSet(closedSet));
-            if(microscope.getCost()<bound)r.setBound(microscope.getCost());
+            if(counter !=1)r.setClosedSet(getLatestClosedSet(closedSet));
+            if(microscope.getCost()<bound && graph.nodes.get(microscope.getLastNode()).is_end )r.setBound(microscope.getCost());
 
             r.setMicroscope(microscope.getPathStr());
             r.setChildrenStates("[]");
@@ -78,12 +78,14 @@ public class BranchAndBound {
             visitedPaths.add(microscope);
 
             if(graph.nodes.get(microscope.getLastNode()).is_end){
+
                 visitedPaths.add(microscope);
-                r.setChildrenStates("[TELIKO]");
+                r.setChildrenStates("[TELIKO]".replace("[","").replace("]",""));
                 r.setBound(microscope.getCost());
 
                 gotLastNode = true;
                 bound = microscope.getCost();
+
                 rs.add(r);
                 continue;
             }
@@ -120,9 +122,9 @@ public class BranchAndBound {
 
         rs.add(new Records("KENO",getLatestClosedSet(closedSet),
                 "KENO", bound,"[KENO]"));
-        for(int i = 0; i<rs.size();i++){
-            rs.get(i).printRecord();
-        }
+       // for(int i = 0; i<rs.size();i++){
+         //   rs.get(i).printRecord();
+        //}
 
 
         return rs;

@@ -9,6 +9,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import java.awt.*;
 import java.net.URL;
@@ -22,7 +23,6 @@ import static sample.Main.getTheStrPaths;
 public class MainController implements Initializable {
 
     public String getLatestClosedSet(List<Path> closedSet){
-        //System.out.println(closedSet.size());
         String latestSet = "";
         for (Path p: closedSet
              ) {
@@ -31,6 +31,25 @@ public class MainController implements Initializable {
         }
         return latestSet;
     }
+
+
+
+        public void DrawPathOptimalPath(ObservableList<Records> States) throws InterruptedException {
+
+            for (Records state:States) {
+                //Draws the path that is an end state and has the lowest bound
+                if(state.bound == BranchAndBound.bound && Objects.equals(state.childrenStates.get(),"TELIKO")){
+                    for (String id:state.microscope.get().split(" ")) {
+                        Rectangle rec = (Rectangle)GP.lookup("#"+id);
+                        rec.setFill(javafx.scene.paint.Color.RED);
+                    }
+                }
+            }
+
+        }
+
+
+
 
     //@FXML private TableView<Records> tableView;
     @FXML private TableColumn<Records, String> searchfrontCol;
@@ -48,19 +67,13 @@ public class MainController implements Initializable {
     //@FXML
     //private TableColumn<Person, LocalDate> birthdayColumn;
 
-    public void generateRandom(ActionEvent event) {
-       // ObservableList<Records> people = FXCollections.observableArrayList();
-        //ObservableList<Records> l = FXCollections.observableArrayList();
-
-        //Graph graph = new Graph(6,5);
-        //graph.createGraph();
+    public void generateRandom(ActionEvent event) throws InterruptedException {
 
 
-        tableView.setItems(BranchAndBound.BranchAndBound());
-        Rectangle rec = (Rectangle)GP.lookup("#1,1");
-        rec.setFill(javafx.scene.paint.Color.RED);
-
-
+        ObservableList<Records> States = BranchAndBound.BranchAndBound();
+        tableView.setItems(States);
+        int index = 0;
+        DrawPathOptimalPath(States);
 
 
     }
@@ -75,11 +88,6 @@ public class MainController implements Initializable {
         boundCol.setCellValueFactory(new PropertyValueFactory<Records, Integer>("bound"));
         childrenStateCol.setCellValueFactory(new PropertyValueFactory<Records, String>("childrenStates"));
 
-        //load dummy data
-
-
-        //Update the table to allow for the first and last name fields
-        //to be editable
         tableView.setEditable(true);
         searchfrontCol.setCellFactory(TextFieldTableCell.forTableColumn());
         microscopeCOl.setCellFactory(TextFieldTableCell.forTableColumn());
