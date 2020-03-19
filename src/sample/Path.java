@@ -10,13 +10,15 @@ public class Path implements Cloneable {
 
     private int cost = 0;
     public String pathStr = "";
-    public List<Node> nodesInPath = new ArrayList<Node>();
 
-    Path(){}
+
+    Path(String path){
+        this.pathStr = path;
+    }
     Path(Path otherPath){
         this.cost = otherPath.cost;
         this.pathStr = otherPath.pathStr;
-        this.nodesInPath = otherPath.nodesInPath;
+
     }
 
     public int getCost() {
@@ -24,7 +26,7 @@ public class Path implements Cloneable {
     }
 
     public void addNode(Node n){
-        this.nodesInPath.add(n);
+
 
         this.pathStr = this.pathStr + n.getNodeId() + " ";
     }
@@ -39,9 +41,7 @@ public class Path implements Cloneable {
         }
 
         final Path otherPath = (Path) obj;
-        if((this.nodesInPath != null) ? (otherPath.nodesInPath != null) :this.nodesInPath.equals(otherPath.nodesInPath) ){
-            return false;
-        }
+
         if((this.pathStr != null) ? (otherPath.pathStr != null) :this.pathStr.equals(otherPath.pathStr) ){
             return false;
         }
@@ -76,21 +76,7 @@ public class Path implements Cloneable {
         return null;
     }
 
-    public boolean checkIfBacktracked(Node n){
-       try{
-           Node n2 = this.nodesInPath.get(this.nodesInPath.size() - 2);
-           if(n2 != null && n2.getNodeId() != n.getNodeId()){
-               return true;
-           }
-           if(n2 == null){
-               return true;
-           }
 
-       }catch (NullPointerException e){
-            e.printStackTrace();
-       }
-       return false;
-    }
 
     public String getPathStr() {
         return pathStr;

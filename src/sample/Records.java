@@ -6,11 +6,11 @@ import javafx.beans.property.StringProperty;
 public class Records {
     SimpleStringProperty searchFront;
     SimpleStringProperty closedSet;
-    SimpleStringProperty microscope;
+    public SimpleStringProperty microscope;
     int bound;
     SimpleStringProperty childrenStates;
-
-    Records(String searchFront, String closedSet, String microscope, int bound, String childrenStates){
+    Records(){};
+    Records(String searchFront , String closedSet, String microscope, int bound, String childrenStates){
         this.searchFront = new SimpleStringProperty(searchFront);
         this.closedSet = new SimpleStringProperty(closedSet);
         this.microscope = new SimpleStringProperty(microscope);
@@ -25,6 +25,7 @@ public class Records {
     public SimpleStringProperty searchFrontProperty() {
         return searchFront;
     }
+
 
     public void setSearchFront(String searchFront) {
         this.searchFront.set(searchFront);
@@ -72,5 +73,11 @@ public class Records {
 
     public void setChildrenStates(String childrenStates) {
         this.childrenStates.set(childrenStates);
+    }
+
+
+    public void printRecord(){
+        System.out.println("SearchFront:" + this.searchFront.get() + " ClosedSet " + this.closedSet.get() + " Microscope " + this.microscope.get() + " Bound " + this.bound
+        +" ChildrenState " + this.childrenStates.get());
     }
 }

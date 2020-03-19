@@ -33,19 +33,12 @@ public class Main extends Application {
         return arr;
     }
 
-    public static String[] getTheStrPaths(Stack<Path> paths){
-        String[] arr = new String[paths.size()];
-        for(int i = 0; i < paths.size();i++){
-            arr[i] = paths.get(i).getPathStr();
-        }
-        return arr;
-    }
 
     public static void main(String[] args) throws CloneNotSupportedException {
 
 
         launch(args);
-
+        //BranchAndBound.BranchAndBound();
 
 
 

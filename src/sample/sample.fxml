@@ -16,7 +16,7 @@
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <GridPane id="datagrid" gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="181.0" prefWidth="219.0" style="-fx-background-color: white;">
+            <GridPane id="datagrid" fx:id="GP" gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="181.0" prefWidth="219.0" style="-fx-background-color: white;">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="50.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="50.0" />
