@@ -13,7 +13,7 @@ import java.util.Stack;
 public class BranchAndBound {
     static int bound = Integer.MAX_VALUE;
     public static String getLatestClosedSet(List<Path> closedSet){
-        //System.out.println(closedSet.size());
+
         String latestSet = "";
         for (Path p: closedSet
         ) {
@@ -45,7 +45,7 @@ public class BranchAndBound {
 
 
 
-        //ObservableList<Records> l = FXCollections.observableArrayList();
+
         //Initialize our initial values
         Graph graph = new Graph(6,5);
         graph.createGraph();
@@ -62,11 +62,13 @@ public class BranchAndBound {
 
         microscope = null;
         boolean gotLastNode = false;
+        //Keep running until the searchFront stack is empty
         while(searchFront.size() != 0){
+            // assign to the closed set after one loop.
             if(counter != 1){
                 closedSet.add(visitedPaths.get(visitedPaths.size() - 1));
             }
-            Records r = new Records(Arrays.toString(getReversedArray(getTheStrPaths(searchFront))).replace("[","").replace("]",""),"KENO",
+            Records r = new Records(Arrays.toString(getReversedArray(getTheStrPaths(searchFront))).replace("[","").replace("]",""),"EMPTY SET",
                     "", bound,"[]");
             microscope = searchFront.pop();
             if(counter !=1)r.setClosedSet(getLatestClosedSet(closedSet));
@@ -76,11 +78,12 @@ public class BranchAndBound {
             r.setChildrenStates("[]");
 
             visitedPaths.add(microscope);
-
+            // if we find an end node we update the bound to the cost of the path that it belongs and we continue without
+            // finding its children
             if(graph.nodes.get(microscope.getLastNode()).is_end){
 
                 visitedPaths.add(microscope);
-                r.setChildrenStates("[TELIKO]".replace("[","").replace("]",""));
+                r.setChildrenStates("[FINAL]".replace("[","").replace("]",""));
                 r.setBound(microscope.getCost());
 
                 gotLastNode = true;
@@ -91,12 +94,15 @@ public class BranchAndBound {
             }
 
 
-
+            // if the path at the microscope has a bigger bound than the current best global bound
+            // we prune it since we know it wont lead to a better solution
             if(microscope.getCost()  > bound){
                 r.setChildrenStates("[Prunned current cost "+microscope.getCost()+" > bound "+bound+"]");
                 rs.add(r);
                 continue;}
-
+            // Find the children of the last node of our path, combine them and create the new paths
+            // check that we dont loopback to already checked paths that exists in the closed set.
+            // Avoid checking nodes that are walls
             for (String neighbour :graph.nodes.get(microscope.getLastNode()).neighbours) {
                 Node currentNeighbour = graph.nodes.get(neighbour);
                 Path childPath = new Path(microscope);
@@ -112,6 +118,7 @@ public class BranchAndBound {
             }
 
             r.setChildrenStates(Arrays.toString(getTheStrPaths(childrenStates)));
+
             while (childrenStates.size()!=0){
 
                 searchFront.push(childrenStates.pop());
@@ -120,11 +127,11 @@ public class BranchAndBound {
             counter++;
         }
 
-        rs.add(new Records("KENO",getLatestClosedSet(closedSet),
-                "KENO", bound,"[KENO]"));
-       // for(int i = 0; i<rs.size();i++){
-         //   rs.get(i).printRecord();
-        //}
+        rs.add(new Records("EMPTY SET",getLatestClosedSet(closedSet),
+                "EMPTY SET ", bound,"[EMPTY SET]"));
+        for(int i = 0; i<rs.size();i++) {
+            rs.get(i).printRecord();
+        }
 
 
         return rs;

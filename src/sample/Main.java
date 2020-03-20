@@ -1,16 +1,9 @@
 package sample;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TableView;
 import javafx.stage.Stage;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Stack;
 
 public class Main extends Application {
 
@@ -23,14 +16,6 @@ public class Main extends Application {
 
         primaryStage.show();
 
-    }
-
-    public static String[] getTheStrPaths(List<Path> paths){
-        String[] arr = new String[paths.size()];
-        for(int i = 0; i < paths.size();i++){
-            arr[i] = paths.get(i).getPathStr();
-        }
-        return arr;
     }
 
 

@@ -1,7 +1,6 @@
 package sample;
 
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 
 public class Records {
     SimpleStringProperty searchFront;
@@ -9,7 +8,6 @@ public class Records {
     public SimpleStringProperty microscope;
     int bound;
     SimpleStringProperty childrenStates;
-    Records(){};
     Records(String searchFront , String closedSet, String microscope, int bound, String childrenStates){
         this.searchFront = new SimpleStringProperty(searchFront);
         this.closedSet = new SimpleStringProperty(closedSet);

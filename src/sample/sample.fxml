@@ -90,7 +90,7 @@
             </AnchorPane>
             <AnchorPane layoutX="14.0" layoutY="181.0" prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="clickme" layoutX="74.0" layoutY="87.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#generateRandom" text="Start" textFill="#c90707" />
+                  <Button fx:id="clickme" layoutX="74.0" layoutY="87.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#generateOptimalPath" text="Start" textFill="#c90707" />
                   <Label layoutX="64.0" layoutY="132.0" />
                </children>
             </AnchorPane>

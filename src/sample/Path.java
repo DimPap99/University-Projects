@@ -1,10 +1,5 @@
 package sample;
 
-import jdk.jfr.StackTrace;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
 
 public class Path implements Cloneable {
 
