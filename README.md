@@ -4,4 +4,4 @@ By changing the positions of the walls from the code it can work in any maze.
 <br>
 Letter I: The start of the maze.<br>
 Letter G: The end of the maze.
-![](Images/Result.png)
+![](Images/Results.png)
