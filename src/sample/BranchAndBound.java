@@ -40,7 +40,7 @@ public class BranchAndBound {
         }
         return temp;
     }
-
+    // It uses DFS search with priority at moving down.
     public static  ObservableList<Records> BranchAndBound(){
 
 
