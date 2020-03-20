@@ -23,6 +23,7 @@ public class Graph {
         for(int row = 0; row < this.rows; row++){
             for (int col = 0;col < this.columns; col++){
                 boolean wall = false;
+                // These are the predetermined positions of the walls/start/end of the maze that was assigned to me.
                 if((col == 0 || col == 4) || ((row == 0 || row == 5 ) && col != 1) || ((row == 2 || row == 3) && col == 2)){
                     wall = true;
                 }
