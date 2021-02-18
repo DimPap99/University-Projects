@@ -24,8 +24,12 @@ class Image(object):
         self.get_lab_channels(self.lab)
     def get_lab_channels(self, lab):
         self.L, self.A, self.B = cv2.split(lab)
-        
-
+    
+    @classmethod
+    def rgb_to_gray(cls, image):
+        gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
+        return gray
+    
     def show_lab_channels(self):
         try:
             cv2.imshow("l*a*b", self.lab)
@@ -38,6 +42,11 @@ class Image(object):
             print("The image hasnt been converted to the lab color model yet...")
             sys.exit(0)
     
+    # def show_image(image):
+    #     cv2.imshow("Image", image)  # For B Channel
+    #     cv2.waitKey(0)
+    #     cv2.destroyAllWindows()
+
 
     def get_slic_superpixels(self, show=False, num_of_segments=100):
         try:    
@@ -49,10 +58,14 @@ class Image(object):
             # of segments
             self.segments = slic(self.image, n_segments=num_of_segments, sigma=0.5)
             # show the output of SLIC
+            print(self.segments)
             if show is True:
+                
                 marked_img =  mark_boundaries(self.image, self.segments)
                 cv2.imshow("SLIC superpixels", np.hstack([marked_img]))
                 cv2.waitKey(0)
+                
+
         except AttributeError:
             print("The image hasnt been converted to lab yet...")
 
