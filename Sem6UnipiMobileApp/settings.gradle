@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "texnologia_logismikou_2020"

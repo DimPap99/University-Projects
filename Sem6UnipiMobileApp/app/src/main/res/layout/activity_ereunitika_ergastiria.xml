@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity"
+    tools:openDrawer="start">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            tools:layout_editor_absoluteX="-26dp"
+            tools:layout_editor_absoluteY="-2dp"></include>
+
+        <ScrollView     android:layout_width="wrap_content"
+            android:layout_height="wrap_content"    android:layout_below="@+id/toolbar">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:layout_scrollFlags="scroll|enterAlways">
+
+
+
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="508dp"
+                    android:layout_height="155dp"
+                    android:layout_marginLeft="80dp"
+                    android:autoLink="web"
+                    android:text="Ερευνητικά εργαστήρια"
+                    android:textColor="#003366"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="50dp"
+                    android:text="Στο Τμήμα Πληροφορικής λειτουργούν τα παρακάτω θεσμοθετημένα ερευνητικά εργαστήρια:" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#003366"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="110dp"
+                    android:text="· Εργαστήριο Διακριτών Μαθηματικών και Θεωρητικής Πληροφορικής" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="118dp"
+                    android:layout_height="94dp"
+                    android:layout_marginTop="170dp"
+                    app:srcCompat="@drawable/pc" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="95dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="170dp"
+                    android:text="Διευθυντής: Επίκουρος Καθηγητής Χ. Κωνσταντόπουλος\n\nΔιεύθυνση: Αίθουσα 001, κεντρικό κτίριο" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#003366"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="290dp"
+                    android:text="· Εργαστήριο Διακριτών Μαθηματικών και Θεωρητικής Πληροφορικής" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="118dp"
+                    android:layout_height="94dp"
+                    android:layout_marginTop="345dp"
+                    app:srcCompat="@drawable/pc" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="307dp"
+                    android:layout_height="107dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="360dp"
+                    android:text="Διευθυντής: Καθηγητής Γ. Τσιχριντζής\n\nΔιεύθυνση: Αίθουσα 207, κεντρικό κτίριο" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#003366"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="465dp"
+                    android:text="· Εργαστήριο Ασφάλειας" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="118dp"
+                    android:layout_height="94dp"
+                    android:layout_marginTop="505dp"
+                    app:srcCompat="@drawable/pc" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="315dp"
+                    android:layout_height="117dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="510dp"
+                    android:text="Διευθύντρια: Αναπληρώτρια Καθηγήτρια Αν. Πολέμη\n\nΔιεύθυνση: Αίθουσα 502, κεντρικό κτίριο" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#003366"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="625dp"
+                    android:text="· Εργαστήριο Ενσωματωμένων Υπολογιστικών Συστημάτων" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="118dp"
+                    android:layout_height="94dp"
+                    android:layout_marginTop="680dp"
+                    app:srcCompat="@drawable/pc" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="110dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="685dp"
+                    android:text="Διευθυντής: Επίκουρος Καθηγητής Μ. Ψαράκης\n\nΔιεύθυνση: Αίθουσα 205, κεντρικό κτίριο" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#003366"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="800dp"
+                    android:text="· Εργαστήριο Τεχνητής Νοημοσύνης και Εικονικής Πραγματικότητας" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="118dp"
+                    android:layout_height="94dp"
+                    android:layout_marginTop="855dp"
+                    app:srcCompat="@drawable/kel" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="322dp"
+                    android:layout_height="126dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="865dp"
+                    android:text="Διευθυντής: Καθηγητής Θεμιστοκλής Παναγιωτόπουλος\n\nΔιεύθυνση: Αίθουσα 212, κεντρικό κτίριο" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#003366"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="975dp"
+                    android:text="· Εργαστήριο Διαδικτυακών και Τηλεπικοινωνιακών Συστημάτων Υπηρεσιών και Ασφάλειας" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="118dp"
+                    android:layout_height="94dp"
+                    android:layout_marginTop="1035dp"
+                    app:srcCompat="@drawable/pc" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="102dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="1055dp"
+                    android:text="Διευθυντής: Καθηγητής Χρήστος Δουληγέρης\n\nΔιεύθυνση: Αίθουσα 208, κεντρικό κτίριο" />
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#003366"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="1155dp"
+                    android:text="· Εργαστήριο Τεχνολογίας Λογισμικού" />
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="118dp"
+                    android:layout_height="94dp"
+                    android:layout_marginTop="1195dp"
+                    app:srcCompat="@drawable/se" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="102dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="1200dp"
+                    android:text="Διευθύντρια: Καθηγήτρια Μαρία Βίρβου\n\nΔιεύθυνση: Αίθουσα 207, Κεντρικό Κτίριο" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="382dp"
+                    android:layout_height="657dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="1310dp"
+                    android:text="Το εργαστήριο Τεχνολογίας Λογισμικού έχει ως κύριο στόχο την προώθηση της βασικής έρευνας και της υψηλής ποιότητας διδασκαλίας σε καίρια και σύγχρονα θέματα της Τεχνολογίας Λογισμικού, Εκπαιδευτικού Λογισμικού, Μοντελοποίησης χρηστών, Μηχανικής μάθησης και Αναγνώρισης προτύπων, Ανάλυσης Εικόνας, Τεχνητής Αίσθησης και Διαδικτυακής Νοημοσύνης.\n\nΗ προώθηση αυτή στοχεύει τόσο στον Ελλαδικό χώρο και τον χώρο του Πανεπιστημίου Πειραιώς, όσο και διεθνώς στην παγκόσμια επιστημονική κοινότητα, έτσι ώστε να επιτευχθεί η ανάδειξη της ερευνητικής δραστηριότητας του Εργαστηρίου (και κατ' επέκταση του Τμήματος Πληροφορικής του Πανεπιστημίου Πειραιώς, στο οποίο ανήκει το Εργαστήριο) ως υπολογίσιμης δύναμης στο διεθνές ερευνητικό γίγνεσθαι.\n\nΗ Διευθύντρια του Εργαστηρίου είναι η Μαρία Βίρβου και ο Υπεύθυνος της Ομάδας Αναγνώριση Προτύπων και Ανάλυση Εικόνας είναι ο Γεώργιος Τσιχριντζής. Τα μέλη του Εργαστηρίου είναι 6 μέλη Διδακτικού και Ερευνητικού Προσωπικού (Δ.Ε.Π.), 14 υποψήφιοι Διδάκτορες και 10 μεταδιδακτορικοί ερευνητές. Το Εργαστήριο έχει φέρει εις πέρας πάνω από 10 ερευνητικά προγράμματα (R AND D projects).Τα μέλη του έχουν δημοσιεύσει 15 μονογραφίες, πάνω από 600 άρθρα σε διεθνή περιοδικά και συνέδρια. Επιπρόσθετα, έχουν επιμεληθεί 14 ειδικά τεύχη διεθνών περιοδικών και έχουν επιβλέψει 15 ολοκληρωμένα διδακτορικά. Μέλη του Εργαστηρίου είναι Επικεφαλής Εκδόσεων και μέλη της επιτροπής εκδόσεων σε διεθνή περιοδικά και έχουν υπηρετήσει ως πρόεδροι σε 30 καθιερωμένα διεθνή συνέδρια. Μέλη του Εργαστηρίου έχουν λάβει πολλές διακρίσεις για το έργο τους.\n\nΔιευθύντρια: Καθηγήτρια Μαρία Βίρβου\n\nΔιεύθυνση: Αίθουσα 207, Κεντρικό Κτίριο" />
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="1955dp"
+                    android:text="@string/ergastirio" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#003366"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="2000dp"
+                    android:text="· Εργαστήριο Διαδικτυακών και Τηλεπικοινωνιακών Συστημάτων Υπηρεσιών και Ασφάλειας" />
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="118dp"
+                    android:layout_height="94dp"
+                    android:layout_marginTop="2055dp"
+                    app:srcCompat="@drawable/dss" />
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="102dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="2075dp"
+                    android:text="Διευθυντής: Καθηγητής Δημήτριος Δεσπότης\n\nΔιεύθυνση: Αίθουσα 209, κεντρικό κτίριο" />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="388dp"
+                    android:layout_height="384dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2155dp"
+                    android:text="Το Εργαστήριο Συστημάτων Υποστήριξης Αποφάσεων ιδρύθηκε στο Τμήμα Πληροφορικής του Πανεπιστήμιου Πειραιώς το έτος 2001 (ΠΔ 244/2001 – ΦΕΚ Α 182/7-8-2001). Το Εργαστήριο Σ.Υ.Α. υποστηρίζει τη διδασκαλία σχετικών με το αντικείμενό του μαθημάτων σε προπτυχιακό και μεταπτυχιακό επίπεδο, τόσο σε θεωρητικό όσο και σε πρακτικό επίπεδο με την άσκηση των φοιτητών σε ειδικό λογισμικό που υλοποιούν διάφορα μοντέλα υποστήριξης αποφάσεων.\n\nΟι ερευνητικές δραστηριότητες του εργαστηρίου εστιάζουν στα πεδία των συστημάτων υποστήριξης αποφάσεων, μεθοδολογιών μέτρησης αποδοτικότητας συστημάτων, πολυκριτηριακής ανάλυσης αποφάσεων, διαχείρισης γνώσης, ανάλυσης δεδομένων και εξόρυξης γνώσης. Αναλαμβάνει δια των μελών του την διοργάνωση ειδικών θεματικών ενοτήτων σε διεθνή συνέδρια Επιχειρησιακής Έρευνας.\n\nhttp://dsslab.cs.unipi.gr" />
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#003366"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="2525dp"
+                    android:text="· Εργαστήριο Πληροφοριακών Συστημάτων" />
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="118dp"
+                    android:layout_height="94dp"
+                    android:layout_marginTop="2565dp"
+                    app:srcCompat="@drawable/pc" />
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="102dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="2575dp"
+                    android:text="Διευθυντής: Αναπληρωτής Καθηγητής Κ. Μεταξιώτης\n\nΔιεύθυνση: Αίθουσα 604, Γρ. Λαμπράκη 126" />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="384dp"
+                    android:layout_height="198dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2675dp"
+                    android:text="Το Εργαστήριο Πληροφορικών Συστημάτων ιδρύθηκε το 2001. Είναι θεσμοθετημένο εργαστήριο του Τμήματος Πληροφορικής του Πανεπιστημίου Πειραιώς. Κύριος σκοπός του εργαστηρίου είναι η υποστήριξη των εκπαιδευτικών και ερευνητικών δραστηριοτήτων του Τμήματος Πληροφορικής στο ευρύ επιστημονικό πεδίο των Πληροφοριακών Συστημάτων και των εφαρμογών τους." />
+            </RelativeLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/navigationView"
+        layout_gravity="start"
+        app:headerLayout="@layout/drawer_header"
+        android:background="@color/colorSide"
+        android:layout_gravity="start"
+        app:itemTextColor="#f2f2f2"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        >
+        <ExpandableListView
+            android:groupIndicator="@android:color/transparent"
+            android:id="@+id/navigationmenu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="102dp"
+            android:background="@color/colorSide">
+        </ExpandableListView>
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

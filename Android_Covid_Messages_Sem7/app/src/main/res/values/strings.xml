@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AtomikiErgasia2</string>
+    <string name="call_number">13033</string>
+    <string name="db_name">UserDB</string>
+    <string name="table_messages">Messages</string>
+    <string name="table_users">User</string>
+
+</resources>

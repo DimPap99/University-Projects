@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/arxiki"
+        android:title="Αρχική" >
+        <ImageView
+            android:id="@+id/icons"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/contact"
+            />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/listTitle"
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+            android:textColor="@android:color/black"
+            android:layout_marginRight="115dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp" />
+    </item>
+    <item
+        android:id="@+id/contact"
+        android:icon="@drawable/contact"
+        android:title="Επικοινωνία" />
+</menu>

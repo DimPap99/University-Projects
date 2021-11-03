@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">texnologia_logismikou_2020</string>
+    <string name="drawerOpen">drawerOpen</string>
+    <string name="drawerClose">drawerClose</string>
+    <string name="link_to_strategy">
+        <a href="https://www.unipi.gr/unipi/images/various/modip/%CE%917_%CE%A3%CF%84%CF%81%CE%B1%CF%84%CE%B7%CE%B3%CE%B9%CE%BA%CF%8C%CF%82_%CE%A0%CF%81%CE%BF%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B1%CF%84%CE%B9%CF%83%CE%BC%CF%8C%CF%82_%CF%84%CE%BF%CF%85_%CE%99%CE%B4%CF%81%CF%8D%CE%BC%CE%B1%CF%84%CE%BF%CF%82.pdf">Στρατηγική Ιδρύματος</a>
+    </string>
+    <string name="cs_unipi">
+        <a href="http://www.cs.unipi.gr">http://www.cs.unipi.gr</a>
+    </string>
+    <string name="ergastirio">
+        <a href="http://www.cs.unipi.gr/docs/ergasthrio.pdf">http://www.cs.unipi.gr/docs/ergasthrio.pdf</a>
+    </string>
+</resources>

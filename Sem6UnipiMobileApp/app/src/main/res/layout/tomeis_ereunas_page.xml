@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity"
+    tools:openDrawer="start">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            tools:layout_editor_absoluteX="-26dp"
+            tools:layout_editor_absoluteY="-2dp"></include>
+
+        <ScrollView     android:layout_width="wrap_content"
+            android:layout_height="wrap_content"    android:layout_below="@+id/toolbar">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:layout_scrollFlags="scroll|enterAlways">
+
+                <TextView
+                    android:id="@+id/pol_prost_title"
+                    android:layout_width="334dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="72dp"
+                    android:autoLink="web"
+                    android:text="Τομείς έρευνας"
+                    android:textColor="#003366"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="873dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="45dp"
+                    android:text="Τα ερευνητικά ενδιαφέροντα των ακαδημαϊκών μελών του Τμήματος καλύπτουν τους κυριότερους τομείς της Επιστήμης της Πληροφορικής. Οι τομείς αυτοί προσδιορίζονται από τις ακόλουθες περιοχές ερευνητικής δραστηριότητας:
+
+\n\n·Θεωρία Αλγορίθμων και Υπολογισμού
+\n\n·Συνδυαστική ανάλυση
+\n\n·Τεχνολογία Λογισμικού
+\n\n·Ευφυή Εικονικά Περιβάλλοντα
+\n\n·Κρυπτογραφία
+\n\n·Θεωρία Γραφημάτων
+\n\n·Υπολογιστική Γεωμετρία
+\n\n·Υπολογιστική Λογική
+\n\n·Γλώσσες Προγραμματισμού
+\n\n·Παράλληλοι και Κατανεμημένοι Αλγόριθμοι
+\n\n·Δίκτυα Υπολογιστών
+\n\n·Συστήματα Βάσεων Δεδομένων
+\n\n·Κινητά Υπολογιστικά Συστήματα
+\n\n·Ασφάλεια Πληροφοριακών Συστημάτων
+\n\n·Τεχνητή Νοημοσύνη
+\n\n·Νευρωνικά Δίκτυα
+\n\n·Αναγνώριση Προτύπων
+\n\n·Επιστημονικοί Υπολογισμοί
+\n\n·Γραφικά
+\n\n·Επεξεργασία Σήματος
+\n\n·Επεξεργασία Εικόνας
+\n\n·Βελτιστοποίηση
+\n\n·Σχεδίαση και Ελεγχος Ολοκληρωμένων Κυκλωμάτων
+\n\n·Αρχιτεκτονική Υπολογιστών"
+                    android:textColor="#00264d" />
+            </RelativeLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/navigationView"
+        layout_gravity="start"
+        app:headerLayout="@layout/drawer_header"
+        android:background="@color/colorSide"
+        android:layout_gravity="start"
+        app:itemTextColor="#f2f2f2"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        >
+        <ExpandableListView
+            android:groupIndicator="@android:color/transparent"
+            android:id="@+id/navigationmenu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="102dp"
+            android:background="@color/colorSide">
+        </ExpandableListView>
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

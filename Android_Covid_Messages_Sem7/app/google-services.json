@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "931136918739",
+    "project_id": "atomikiergasia2",
+    "storage_bucket": "atomikiergasia2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:931136918739:android:107fa793409bb61b9a7026",
+        "android_client_info": {
+          "package_name": "com.example.atomikiergasia2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "931136918739-qr2tt7h5cu849d847330rouqitf8fkcf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwytSgxiqKHkG8oawxySc0H6i5mojT_vY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "931136918739-qr2tt7h5cu849d847330rouqitf8fkcf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
