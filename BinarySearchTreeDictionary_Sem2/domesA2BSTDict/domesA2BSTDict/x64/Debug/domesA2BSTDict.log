@@ -1,0 +1,6 @@
+﻿  stdafx.cpp
+  domesA2BSTDict.cpp
+c:\users\jim\desktop\bstdictionarydomes2-master\domesa2bstdict\domesa2bstdict\domesa2bstdict.cpp(137): warning C4099: 'Node': type name first seen using 'class' now seen using 'struct'
+  c:\users\jim\desktop\bstdictionarydomes2-master\domesa2bstdict\domesa2bstdict\domesa2bstdict.cpp(12): note: see declaration of 'Node'
+  domesA2BSTDict.vcxproj -> C:\Users\jim\Desktop\BSTDictionaryDomes2-master\domesA2BSTDict\x64\Debug\domesA2BSTDict.exe
+  domesA2BSTDict.vcxproj -> C:\Users\jim\Desktop\BSTDictionaryDomes2-master\domesA2BSTDict\x64\Debug\domesA2BSTDict.pdb (Partial PDB)

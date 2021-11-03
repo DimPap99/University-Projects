@@ -1,0 +1,5 @@
+﻿  domesA2BSTDict.cpp
+c:\users\jim\documents\visual studio 2017\projects\domesa2bstdict\domesa2bstdict\domesa2bstdict.cpp(322): warning C4099: 'Node': type name first seen using 'class' now seen using 'struct'
+  c:\users\jim\documents\visual studio 2017\projects\domesa2bstdict\domesa2bstdict\domesa2bstdict.cpp(16): note: see declaration of 'Node'
+  domesA2BSTDict.vcxproj -> C:\Users\Jim\documents\visual studio 2017\Projects\domesA2BSTDict\Debug\domesA2BSTDict.exe
+  domesA2BSTDict.vcxproj -> C:\Users\Jim\documents\visual studio 2017\Projects\domesA2BSTDict\Debug\domesA2BSTDict.pdb (Partial PDB)
